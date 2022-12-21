@@ -1,5 +1,5 @@
 # ECE9143_HPML_final_project
-##Goals
+## Goals
 The first goal is to understand where the time is spent in each phases(data preprocessing time, data loading time, training time, and inference when training VGG model using CIFAR 10 dataset on CPU and GPU.
 
 The second goal is apply three different optimization technique to boost the model and evaluate the performance in comparison to performance before the optimization.
@@ -49,4 +49,9 @@ singularity exec --nv \
 My cuda and pytorch module was installed under lab2's directory, so my file path will look like this, but it will be different for you, as long as the modules are correctly installed, it will be fine.
 
 
-
+## results and observations
+1.performance with GPU(RTX8000) is 10 times better than running with CPU.<br />
+2.Data parallel can reduce data loading time and inference time.<br />
+3.Distributed learning can reduce training time and reduce inference time.<br />
+4.Mixed precision significantly boost performance, result in almost half of the running time.<br />
+5.Three optimization methods are all effective, but mixed precision seems to be better.<br />
